@@ -44,10 +44,7 @@ gulp.task('build:js', function () {
     return gulp.src(paths.js)
         .pipe(concat('app.js'))
         .pipe(replace(/["']use strict["'];/g, ''))
-        .pipe(iife({
-            params: ['window'],
-            args: ['window']
-        }))
+        .pipe(iife())
         .pipe(uglify({
             mangle: true
         }))

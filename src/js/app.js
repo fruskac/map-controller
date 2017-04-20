@@ -1,9 +1,7 @@
 angular.module('app', [
     'ui.bootstrap',
     'ngMaterial'
-]).constant('CONFIG', {
-    map: CONFIG_MAP_PATH
-}).config([
+]).config([
     '$compileProvider',
     '$mdThemingProvider',
     function ($compileProvider, $mdThemingProvider) {
@@ -25,14 +23,7 @@ angular.module('app', [
     '$scope',
     '$location',
     '$window',
-    'CONFIG',
-    function ($scope, $location, $window, CONFIG) {
-
-        var params = $location.search();
-
-        $scope.iframe = CONFIG.map + '?' + Object.keys(params).map(function (i) {
-                return params[i] && encodeURIComponent(i) + "=" + encodeURIComponent(params[i]);
-            }).join('&');
+    function ($scope, $location, $window) {
 
         document.getElementById('map').onload = function () {
             var FruskacMapAPI = document.getElementById('map').contentWindow.fruskac;

@@ -15,7 +15,7 @@
 
 <body ng-controller="AppCtrl">
 
-<iframe ng-src="{{ ::iframe }}" id="map"></iframe>
+<iframe src="<?php echo $mapPath ?>" id="map"></iframe>
 
 <div id="header">
     <a ng-click="navigationOpen=!navigationOpen" class="btn pull-right"
@@ -123,7 +123,6 @@
 
 <script>
     var CONFIG_LANG = '<?php echo $lang ?>';
-    var CONFIG_MAP_PATH = '<?php echo $mapPath ?>';
     var CONFIG_FULLSCREEN = '<?php echo $fullscreen ?>';
     var CONFIG_DATA = <?php echo json_encode($data) ?>;
 </script>
