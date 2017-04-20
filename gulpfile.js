@@ -61,11 +61,13 @@ paths.html = [
 
 gulp.task('build:html', function () {
     return gulp.src(paths.html)
-        /*.pipe(htmlmin({
+        .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true,
-            minifyJS: true
-        }))*/
+            minifyJS: true,
+            minifyCSS: true,
+            ignoreCustomFragments: [ /<\?php[\s\S]*?\?>?/ ]
+        }))
         .pipe(gulp.dest('./dist'));
 });
 
