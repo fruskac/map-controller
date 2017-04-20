@@ -1,0 +1,28 @@
+{
+  "name": "FruskacMapController",
+  "description": "",
+  "main": "dist/index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-base64": "^0.1.3",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-iife": "^0.3.0",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:fruskac/map-controller.git"
+  },
+  "author": "Mladen Plavšić <mladen.plavsic@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://fruskac.github.io/map-controller"
+}
