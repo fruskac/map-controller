@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ФRuŠKać</title>
     <style>
         html,
         body {
@@ -23,7 +22,7 @@
 </head>
 <body>
 
-<iframe src="<?php echo $mapPath ?>" id="map"></iframe>
+<iframe src="<?php echo $mapPath ?>" id="map" allowfullscreen></iframe>
 
 <script>
     document.getElementById('map').onload = function () {

@@ -2,7 +2,7 @@
 
 $lang = isset($_GET['lang']) ? $_GET['lang'] : 'en';
 
-$mapPath = '//localhost/fruskac/map/dist/index.html';
+$mapPath = '//localhost/fruskac/map/dist/index.html?' . $_SERVER['QUERY_STRING'];
 
 $fullscreen = '//localhost/fruskac/map-controller/dist/index.php';
 
