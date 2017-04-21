@@ -26,8 +26,8 @@
 
 <script>
     document.getElementById('map').onload = function () {
-        var FruskacMapAPI = document.getElementById('map').contentWindow.fruskac;
-        new FruskacMapAPI({
+        var FruskacMap = document.getElementById('map').contentWindow.fruskac;
+        new FruskacMap({
             lang: '<?php echo $lang ?>',
             fullscreen: '<?php echo $fullscreen ?>',
             data: <?php echo json_encode($data) ?>

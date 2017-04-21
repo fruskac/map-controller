@@ -26,9 +26,9 @@ angular.module('app', [
     function ($scope, $location, $window) {
 
         document.getElementById('map').onload = function () {
-            var FruskacMapAPI = document.getElementById('map').contentWindow.fruskac;
+            var FruskacMap = document.getElementById('map').contentWindow.fruskac;
 
-            new FruskacMapAPI({
+            new FruskacMap({
                 lang: CONFIG_LANG,
                 fullscreen: CONFIG_FULLSCREEN,
                 data: CONFIG_DATA
