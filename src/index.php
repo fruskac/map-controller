@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.css" inline>
 
 </head>
 
@@ -127,7 +127,7 @@
     var CONFIG_DATA = <?php echo json_encode($data) ?>;
 </script>
 
-<script src="app.js"></script>
+<script src="app.js" inline></script>
 
 </body>
 
