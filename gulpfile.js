@@ -59,7 +59,8 @@ gulp.task('build:less', function () {
 });
 
 paths.js = [
-    'src/js/*.js'
+    'src/js/app.js'
+    ,'src/js/*.js'
 ];
 
 gulp.task('build:js', function () {
