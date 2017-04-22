@@ -17,6 +17,18 @@ $data = array(
                 'lakes',
                 'monasteries',
                 'misc'
+            ),
+            'color' => array(
+                'lakes' => '#448b89',
+                'waterfalls' => '#26b1b7',
+                'fishponds' => '#26b1b7',
+                'monasteries' => '#ac860c',
+                'monuments' => '#666666',
+                'springs' => '#4d84a6',
+                'misc' => '#928e91',
+                'picnic-areas' => '#4f452f',
+                'meadows' => '#9ca22f',
+                'lookouts' => '#8c1bdd'
             )
         )
     ),
@@ -28,7 +40,8 @@ $data = array(
             'visible' => true,
             'show' => array(
                 'households'
-            )
+            ),
+            'color' => '#d2003b'
         )
     ),
     array(
@@ -47,4 +60,3 @@ $data = array(
         'type' => 'FRUSKAC_TYPE_MARKER'
     ),
 );
-
