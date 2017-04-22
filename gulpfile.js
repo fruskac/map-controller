@@ -86,7 +86,10 @@ gulp.task('build:html', function () {
             removeComments: true,
             minifyJS: true,
             minifyCSS: true,
-            ignoreCustomFragments: [/<\?php[\s\S]*?\?>?/]
+            ignoreCustomFragments: [
+                /<\?php[\s\S]*?\?>/g,
+                /<style>[\s\S]*<\?php[\s\S]*?\?>[\s\S]*<\/style>/g
+            ]
         }))
         .pipe(gulp.dest('./dist'));
 });
