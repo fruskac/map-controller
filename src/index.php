@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="app.css" inline>
 
+    <style><?php
+
+            function printColorStyle($itemId, $childId = '', $color) {
+                echo 'input[class*="color-' . $itemId . '-' . $childId . '"]:checked:after{background:' . $color . '!important;border-color:' . $color . '!important;}';
+            }
+
+            foreach ($color as $itemId => $itemColor) {
+                if (is_array($itemColor)) {
+                    foreach ($itemColor as $childId => $childColor) {
+                        printColorStyle($itemId, $childId, $childColor);
+                    }
+                } else {
+                    printColorStyle($itemId, '', $itemColor);
+                }
+            }
+
+    ?></style>
+
 </head>
 
 <body ng-controller="AppCtrl">
@@ -82,12 +100,14 @@
             <div ng-if="::item.children" ng-show="open" class="panel-body" ng-init="$parent.tab=1">
                 <div ng-show="$parent.tab===1" class="row">
                     <div class="col-xs-6" ng-repeat="child in ::item.children">
-                        <div class="checkbox" ng-class="'checkbox-' + child.id">
+                        <div class="checkbox">
                             <label>
                                 <input ng-attr-type="{{ child.type !== 'FRUSKAC_TYPE_TRACK' ? 'checkbox' : 'radio' }}"
                                        ng-click="item.getVisible()&&(child.type !== 'FRUSKAC_TYPE_TRACK'?child.setVisible(!child.getVisible()):child.focus())"
                                        ng-checked="child.getVisible()"
-                                       ng-disabled="!item.getVisible()">
+                                       ng-disabled="!item.getVisible()"
+                                       ng-class="'color-'+item.id+'-'+child.id"
+                                >
                                 {{ ::child.id | humanize }}
                             </label>
                         </div>

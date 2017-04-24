@@ -1,6 +1,6 @@
-/dist
-/config.php
+dist
+config.php
 
-/bower_components/*
-/node_modules/*
+bower_components/*
+node_modules/*
 
