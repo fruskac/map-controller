@@ -69,7 +69,7 @@
                                 <input type="checkbox"
                                        ng-checked="type()==='satellite'"
                                        ng-click="type(type()==='terrain'?'satellite':'terrain')">
-                                Satellite
+                                {{ 'satellite' | translate }}
                             </label>
                         </div>
                     </div>
@@ -85,16 +85,20 @@
                     </a>
                     <md-switch md-no-ink ng-click="item.setVisible(!item.getVisible());open=item.getVisible()"
                                ng-checked="item.getVisible()">
-                        {{ ::item.id | humanize }}
+                        {{ ::item.id | translate:'item' }}
                     </md-switch>
                 </h3>
             </div>
             <ul ng-if="::item.children&&item.categories" ng-show="open" class="nav nav-tabs nav-justified">
                 <li ng-class="{'active':tab===1}">
-                    <a ng-click="$parent.tab=1">Objects</a>
+                    <a ng-click="$parent.tab=1">
+                        {{ 'objects' | translate }}
+                    </a>
                 </li>
                 <li ng-class="{'active':tab===2}">
-                    <a ng-click="$parent.tab=2">Activity</a>
+                    <a ng-click="$parent.tab=2">
+                        {{ 'activity' | translate }}
+                    </a>
                 </li>
             </ul>
             <div ng-if="::item.children" ng-show="open" class="panel-body" ng-init="$parent.tab=1">
@@ -108,7 +112,7 @@
                                        ng-disabled="!item.getVisible()"
                                        ng-class="'color-'+item.id+'-'+child.id"
                                 >
-                                {{ ::child.id | humanize }}
+                                {{ ::child.id | translate:'child' }}
                             </label>
                         </div>
                     </div>
@@ -122,7 +126,7 @@
                                        ng-checked="item.highlightedCategory===category"
                                        ng-click="highlight(item, item.highlightedCategory===category ? null : category)"
                                 >
-                                {{ ::category | humanize }}
+                                {{ ::category | translate:'category' }}
                             </label>
                         </div>
                     </div>
@@ -145,6 +149,7 @@
     var CONFIG_LANG = '<?php echo $lang ?>';
     var CONFIG_FULLSCREEN = '<?php echo $fullscreen ?>';
     var CONFIG_DATA = <?php echo json_encode($data) ?>;
+    var CONFIG_TRANSLATION = <?php echo json_encode($translation) ?>;
 </script>
 
 <script src="app.js" inline></script>
