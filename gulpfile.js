@@ -10,6 +10,7 @@ var runSequence = require('run-sequence');
 var iife = require('gulp-iife');
 var rename = require('gulp-rename');
 var inlinesource = require('gulp-inline-source');
+var expect = require('gulp-expect-file');
 
 var paths = {};
 
@@ -24,6 +25,7 @@ gulp.task('build', [
     'build:less'
     , 'build:js'
     , 'build:html'
+    , 'build:config'
 ]);
 
 gulp.task('inlinesource', function () {
@@ -91,6 +93,14 @@ gulp.task('build:html', function () {
                 /<style>[\s\S]*<\?php[\s\S]*?\?>[\s\S]*<\/style>/g
             ]
         }))
+        .pipe(gulp.dest('./dist'));
+});
+
+
+paths.config = 'config.php';
+gulp.task('build:config', function () {
+    return gulp.src(paths.config)
+        .pipe(expect(paths.config))
         .pipe(gulp.dest('./dist'));
 });
 

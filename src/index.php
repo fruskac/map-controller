@@ -1,4 +1,4 @@
-<?php include('../config.php') ?><!DOCTYPE html>
+<?php include('config.php') ?><!DOCTYPE html>
 <html ng-app="app" lang="en">
 
 <head>

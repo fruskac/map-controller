@@ -9,6 +9,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
+    "gulp-expect-file": "0.0.7",
     "gulp-htmlmin": "^3.0.0",
     "gulp-iife": "^0.3.0",
     "gulp-inline-source": "^3.0.0",
