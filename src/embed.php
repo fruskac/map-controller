@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<iframe src="<?php echo $mapPath ?>" id="map" allowfullscreen></iframe>
+<iframe src="<?php echo $mapPath ?>" id="map" allowfullscreen allowbrand="false"></iframe>
 
 <script>
     document.getElementById('map').onload = function () {
