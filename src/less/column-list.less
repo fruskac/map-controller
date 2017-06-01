@@ -1,0 +1,13 @@
+@gap: 10px;
+
+.column-list {
+  list-style: none;
+  margin: 0 0 -@gap;
+  padding: 0;
+  column-count: 2;
+  column-gap: 0;
+
+  > * {
+    padding-bottom: @gap;
+  }
+}
