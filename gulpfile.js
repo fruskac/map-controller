@@ -111,6 +111,7 @@ gulp.task('watch', function () {
             'watch:js'
             , 'watch:less'
             , 'watch:html'
+            , 'watch:config'
         ]
     )
 });
@@ -125,4 +126,8 @@ gulp.task('watch:less', function () {
 
 gulp.task('watch:html', function () {
     gulp.watch(paths.html, ['build:html']);
+});
+
+gulp.task('watch:config', function () {
+    gulp.watch(paths.config, ['build:config']);
 });

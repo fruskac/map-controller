@@ -59,7 +59,7 @@
                                 <input type="checkbox"
                                        ng-checked="clustering()"
                                        ng-click="clustering(!clustering())">
-                                Clustering
+                                {{ 'clustering' | translate }}
                             </label>
                         </div>
                     </div>
@@ -146,6 +146,7 @@
 <script>
     var CONFIG_LANG = '<?php echo $lang ?>';
     var CONFIG_FULLSCREEN = '<?php echo $fullscreen ?>';
+    var CONFIG_CLUSTERING = <?php echo $clustering ? 'true' : 'false' ?>;
     var CONFIG_DATA = <?php echo json_encode($data) ?>;
     var CONFIG_TRANSLATION = <?php echo json_encode($translation) ?>;
 </script>
