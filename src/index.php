@@ -59,7 +59,7 @@
                                 <input type="checkbox"
                                        ng-checked="clustering()"
                                        ng-click="clustering(!clustering())">
-                                Clustering
+                                {{ 'clustering' | translate }}
                             </label>
                         </div>
                     </div>
@@ -102,19 +102,17 @@
                 </li>
             </ul>
             <div ng-if="::item.children" ng-show="open" class="panel-body" ng-init="$parent.tab=1">
-                <div ng-show="$parent.tab===1" class="row">
-                    <div class="col-xs-6" ng-repeat="child in ::item.children">
-                        <div class="checkbox">
-                            <label>
-                                <input ng-attr-type="{{ child.type !== 'FRUSKAC_TYPE_TRACK' ? 'checkbox' : 'radio' }}"
-                                       ng-click="item.getVisible()&&(child.type !== 'FRUSKAC_TYPE_TRACK'?child.setVisible(!child.getVisible()):child.focus())"
-                                       ng-checked="child.getVisible()"
-                                       ng-disabled="!item.getVisible()"
-                                       ng-class="'color-'+item.id+'-'+child.id"
-                                >
-                                {{ ::child.id | translate:'child' }}
-                            </label>
-                        </div>
+                <div ng-show="$parent.tab===1" class="column-list">
+                    <div ng-repeat="child in ::item.children" class="checkbox">
+                        <label>
+                            <input ng-attr-type="{{ child.type !== 'FRUSKAC_TYPE_TRACK' ? 'checkbox' : 'radio' }}"
+                                   ng-click="item.getVisible()&&(child.type !== 'FRUSKAC_TYPE_TRACK'?child.setVisible(!child.getVisible()):child.focus())"
+                                   ng-checked="child.getVisible()"
+                                   ng-disabled="!item.getVisible()"
+                                   ng-class="'color-'+item.id+'-'+child.id"
+                            >
+                            {{ ::child.id | translate:'child' }}
+                        </label>
                     </div>
                 </div>
                 <div ng-show="$parent.tab===2" class="row">
@@ -148,6 +146,7 @@
 <script>
     var CONFIG_LANG = '<?php echo $lang ?>';
     var CONFIG_FULLSCREEN = '<?php echo $fullscreen ?>';
+    var CONFIG_CLUSTERING = <?php echo $clustering ? 'true' : 'false' ?>;
     var CONFIG_DATA = <?php echo json_encode($data) ?>;
     var CONFIG_TRANSLATION = <?php echo json_encode($translation) ?>;
 </script>

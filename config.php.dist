@@ -5,6 +5,7 @@ $lang = isset($_GET['lang']) ? $_GET['lang'] : 'en';
 $mapPath = '/fruskac/map/dist/index.html';
 
 $fullscreen = '/fruskac/map-controller/dist/index.php';
+$clustering = true;
 
 $data = array(
     array(

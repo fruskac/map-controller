@@ -10,6 +10,7 @@ angular.module('app').controller('AppCtrl', [
             new FruskacMap({
                 lang: CONFIG_LANG,
                 fullscreen: CONFIG_FULLSCREEN,
+                clustering: CONFIG_CLUSTERING,
                 data: CONFIG_DATA
             }).ready(function () {
 
