@@ -52,26 +52,22 @@
     <div ng-if="ready" class="panel-group">
         <div class="panel panel-default">
             <div class="panel-body">
-                <div class="row">
-                    <div class="col-xs-5">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"
-                                       ng-checked="clustering()"
-                                       ng-click="clustering(!clustering())">
-                                {{ 'clustering' | translate }}
-                            </label>
-                        </div>
+                <div class="column-list">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                   ng-checked="clustering()"
+                                   ng-click="clustering(!clustering())">
+                            {{ 'clustering' | translate }}
+                        </label>
                     </div>
-                    <div class="col-xs-6">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"
-                                       ng-checked="type()==='satellite'"
-                                       ng-click="type(type()==='terrain'?'satellite':'terrain')">
-                                {{ 'satellite' | translate }}
-                            </label>
-                        </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                   ng-checked="type()==='satellite'"
+                                   ng-click="type(type()==='terrain'?'satellite':'terrain')">
+                            {{ 'satellite' | translate }}
+                        </label>
                     </div>
                 </div>
             </div>
