@@ -2,8 +2,13 @@
   .alert {
     position: absolute;
     top: 8px;
-    left: 50%;
-    transform: translate(-50%,0);
+    left: 8px;
+
+    @media (min-width: 768px) {
+      left: 50%;
+      transform: translate(-50%,0);
+    }
+
   }
 
   > a {
