@@ -42,6 +42,19 @@
     </a>
 </div>
 
+<div id="alert">
+    <div ng-hide="hideAlert" class="alert alert-default">
+        <span class="hidden-xs">{{ 'alert_text' | translate }}</span>
+        <a class="alert-link" href="#" target="_blank">{{ 'alert_link' | translate }}</a>
+        <a class="close" ng-click="hideAlert=true">
+            <i class="material-icons">clear</i>
+        </a>
+    </div>
+    <a ng-show="hideAlert" ng-click="hideAlert=false" class="hidden-xs">
+        <i class="material-icons">speaker_notes</i>
+    </a>
+</div>
+
 <div id="navigation-overlay" ng-class="{'in':navigationOpen}" ng-click="navigationOpen=false"></div>
 <div id="navigation" ng-class="{'in':navigationOpen}">
     <div ng-hide="ready" class="panel panel-default">
@@ -52,26 +65,22 @@
     <div ng-if="ready" class="panel-group">
         <div class="panel panel-default">
             <div class="panel-body">
-                <div class="row">
-                    <div class="col-xs-5">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"
-                                       ng-checked="clustering()"
-                                       ng-click="clustering(!clustering())">
-                                {{ 'clustering' | translate }}
-                            </label>
-                        </div>
+                <div class="column-list">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                   ng-checked="clustering()"
+                                   ng-click="clustering(!clustering())">
+                            {{ 'clustering' | translate }}
+                        </label>
                     </div>
-                    <div class="col-xs-6">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"
-                                       ng-checked="type()==='satellite'"
-                                       ng-click="type(type()==='terrain'?'satellite':'terrain')">
-                                {{ 'satellite' | translate }}
-                            </label>
-                        </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                   ng-checked="type()==='satellite'"
+                                   ng-click="type(type()==='terrain'?'satellite':'terrain')">
+                            {{ 'satellite' | translate }}
+                        </label>
                     </div>
                 </div>
             </div>
