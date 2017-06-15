@@ -1,0 +1,36 @@
+#alert {
+  .alert {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+
+  > a {
+    position: absolute;
+    top: 14px;
+    left: 228px;
+    color: #fff;
+    text-shadow: 0 0 2px red;
+  }
+
+}
+
+.alert {
+  padding: 6px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+
+  &.alert-default {
+    background: #fff;
+    color: inherit;
+
+    a {
+      color: #2196f3 !important;
+    }
+
+    .material-icons {
+      color: #666;
+    }
+
+  }
+}

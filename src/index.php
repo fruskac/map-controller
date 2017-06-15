@@ -42,6 +42,19 @@
     </a>
 </div>
 
+<div id="alert">
+    <div ng-hide="hideAlert" class="alert alert-default">
+        <span class="hidden-xs">{{ 'alert_text' | translate }}</span>
+        <a class="alert-link" href="#" target="_blank">{{ 'alert_link' | translate }}</a>
+        <a class="close" ng-click="hideAlert=true">
+            <i class="material-icons">clear</i>
+        </a>
+    </div>
+    <a ng-show="hideAlert" ng-click="hideAlert=false" class="hidden-xs">
+        <i class="material-icons">speaker_notes</i>
+    </a>
+</div>
+
 <div id="navigation-overlay" ng-class="{'in':navigationOpen}" ng-click="navigationOpen=false"></div>
 <div id="navigation" ng-class="{'in':navigationOpen}">
     <div ng-hide="ready" class="panel panel-default">
