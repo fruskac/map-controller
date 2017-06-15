@@ -88,6 +88,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="column-list">
+                    <?php /*
                     <div class="checkbox">
                         <label>
                             <input type="checkbox"
@@ -96,6 +97,7 @@
                             {{ 'clustering' | translate }}
                         </label>
                     </div>
+                    */ ?>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox"
@@ -103,6 +105,9 @@
                                    ng-click="type(type()==='terrain'?'satellite':'terrain')">
                             {{ 'satellite' | translate }}
                         </label>
+                    </div>
+                    <div>
+                        <a href="<?php echo $lang_link ?>"><?php echo $lang_text ?></a>
                     </div>
                 </div>
             </div>
