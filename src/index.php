@@ -67,8 +67,7 @@
 
 <div id="alert">
     <div ng-hide="hideAlert" class="alert alert-default">
-        <span class="hidden-xs">{{ 'alert_text' | translate }}</span>
-        <a class="alert-link" href="#" target="_blank">{{ 'alert_link' | translate }}</a>
+        <?php echo $alert ?>
         <a class="close" ng-click="hideAlert=true">
             <i class="material-icons">clear</i>
         </a>
