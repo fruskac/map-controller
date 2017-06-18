@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $title ?></title>
-    
+    <link rel="shortcut icon" href="/sites/all/themes/fruskac/favicon.ico" type="image/vnd.microsoft.icon" />
     <meta name="description" property="og:description" content="<?php echo $teaser ?>" />
 	<link rel="image_src" href="<?php echo $social_img ?>"/>
 	<link rel="publisher" href="https://plus.google.com/109303824210403522789"/>
