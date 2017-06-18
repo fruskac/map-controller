@@ -10,7 +10,7 @@
 	<link rel="image_src" href="<?php echo $social_img ?>"/>
 	<link rel="publisher" href="https://plus.google.com/109303824210403522789"/>
 	<link rel="apple-touch-icon" href="/sites/default/files/default/apple-touch.png"/>
-	
+
 	<!-- fb -->
 	<meta property="og:site_name" content="Fruškać" />
 	<meta property="og:title" content="<?php echo $title ?>" />
@@ -65,6 +65,8 @@
     </a>
 </div>
 
+<?php if ($alert): ?>
+
 <div id="alert">
     <div ng-hide="hideAlert" class="alert alert-default">
         <?php echo $alert ?>
@@ -76,6 +78,8 @@
         <i class="material-icons">speaker_notes</i>
     </a>
 </div>
+
+<?php endif; ?>
 
 <div id="navigation-overlay" ng-class="{'in':navigationOpen}" ng-click="navigationOpen=false"></div>
 <div id="navigation" ng-class="{'in':navigationOpen}">
