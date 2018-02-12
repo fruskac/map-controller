@@ -2,8 +2,11 @@ angular.module('app').controller('AppCtrl', [
     '$scope',
     '$location',
     '$window',
-    function ($scope, $location, $window) {
-
+    function (
+      $scope,
+      $location,
+      $window
+    ) {
         document.getElementById('map').onload = function () {
             var FruskacMap = document.getElementById('map').contentWindow.fruskac;
 
@@ -27,15 +30,13 @@ angular.module('app').controller('AppCtrl', [
                     $scope.highlight = function (item, category) {
                         item.highlightedCategory = category;
                         item.highlight(category);
-                    }
-
-                })
+                    };
+                });
             });
         };
 
         if ($window.innerWidth > 768) {
             $scope.navigationOpen = true;
         }
-
     }
 ]);
