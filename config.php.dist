@@ -2,6 +2,24 @@
 
 $lang = isset($_GET['lang']) ? $_GET['lang'] : 'en';
 
+$map = array(
+    'center' => array(
+        'latitude' => 45.167031,
+        'longitude' => 19.69677
+    ),
+    'zoom' => 9,
+    'bounds' => array(
+        'sw' => array(
+            'latitude' => 45.08306092792847,
+            'longitude' => 19.418079053860538
+        ),
+        'ne' => array(
+            'latitude' => 45.22348783856208,
+            'longitude' => 19.978725110989444
+        )
+    )
+);
+
 $mapPath = '/fruskac/map/dist/index.html';
 
 $fullscreen = '/fruskac/map-controller/dist/index.php';

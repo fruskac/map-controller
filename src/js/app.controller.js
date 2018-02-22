@@ -14,7 +14,8 @@ angular.module('app').controller('AppCtrl', [
                 lang: CONFIG_LANG,
                 fullscreen: CONFIG_FULLSCREEN,
                 clustering: CONFIG_CLUSTERING,
-                data: CONFIG_DATA
+                data: CONFIG_DATA,
+                map: CONFIG_MAP
             }).ready(function () {
 
                 var self = this;
@@ -22,6 +23,7 @@ angular.module('app').controller('AppCtrl', [
                 $scope.$apply(function () {
                     $scope.ready = true;
                     $scope.data = self.getData();
+
                     $scope.clustering = self.clustering;
                     $scope.type = self.type;
 
