@@ -4,18 +4,18 @@ $lang = isset($_GET['lang']) ? $_GET['lang'] : 'en';
 
 $map = array(
     'center' => array(
-        'latitude' => 45.167031,
-        'longitude' => 19.69677
+        'latitude' => 45.1570741,
+        'longitude' => 19.7093099
     ),
     'zoom' => 9,
     'bounds' => array(
         'sw' => array(
-            'latitude' => 45.08306092792847,
-            'longitude' => 19.418079053860538
+            'latitude' => 45.094841,
+            'longitude' => 19.593263
         ),
         'ne' => array(
-            'latitude' => 45.22348783856208,
-            'longitude' => 19.978725110989444
+            'latitude' => 45.236177,
+            'longitude' => 19.819242
         )
     )
 );
