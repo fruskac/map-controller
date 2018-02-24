@@ -20,7 +20,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="fb:app_id" content="162794040527270" />
 	<meta property="og:image" content="<?php echo $social_img ?>" />
-	
+
 	<!-- twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fruskac" />
@@ -28,7 +28,7 @@
 	<meta name="twitter:title" content="<?php echo $title ?>" />
 	<meta name="twitter:description" content="<?php echo $teaser ?>" />
 	<meta name="twitter:image:src" content="<?php echo $social_img ?>" />
-  
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
